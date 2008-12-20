@@ -1,0 +1,8 @@
+<h1>Edit Task</h1>
+
+<form action="/edit/<%= @task.id %>" method="post">
+  <label for="description">Description</label>
+  <input type="text" name="description" id="description" value="<%= @task.description %>">
+  
+  <p><input type="submit" value="Edit!"></p>
+</form>

@@ -1,0 +1,38 @@
+<h1> Too doo list </h1>
+
+<h2> Pending </h2>
+<ul>
+  <% for task in @pending_tasks %>
+    <li>
+      <%= task.description %> 
+      <form method="post" action="/finish/<%= task.id %>">
+        <input value="Done!" type="submit" />
+      </form>
+      <form method="post" action="/delete/<%= task.id %>">
+        <input value="Delete" type="submit" />
+      </form>
+      <a href="/edit/<%= task.id %>">Edit</a>
+    </li>
+  <% end %>
+</ul>
+
+<h2> Completed </h2>
+<ul>
+  <% for task in @completed_tasks %>
+    <li>
+      <%= task.description %>
+      <form method="post" action="/delete/<%= task.id %>">
+        <input value="Delete" type="submit" />
+      </form>
+    </li>
+  <% end %>
+</ul>
+
+<h3> New task </h3>
+
+<form action="/" method="post">
+  <label for="description">Description</label>
+  <input type="text" name="description" id="description">
+  
+  <p><input type="submit" value="Create!"></p>
+</form>
