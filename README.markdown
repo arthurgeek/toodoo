@@ -1,7 +1,7 @@
 Too doo
 ===
 
-A sample [http://github.com/arthurgeek/nyane](Nyane) app.
+A sample [Nyane](http://github.com/arthurgeek/nyane) app.
 
 RUNNING:
 ------------
